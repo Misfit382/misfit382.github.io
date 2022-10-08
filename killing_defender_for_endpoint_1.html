@@ -1,0 +1,134 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body><button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-tops header-top">
+    <div class="container">
+
+      <h1><a href="index.html">Krzysztof Greś </a></h1>
+      <h2>I'm a <span>RedTeamer</span></h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/krzysztof-gre%C5%9B-066361216/" class="linkedin"><i class="icofont-linkedin"></i></a>
+        <a href="https://github.com/misfit382" class="github"><i class="icofont-github"></i></a>
+    </div>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class=""><a href="index.html">Home</a></li>
+          <li class="active"><a href="#articles">Killing Microsoft Defender for Endpoint</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <section id="articles" class="about section-show">
+
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>Killing Microsoft Defender for Endpoint</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <div>
+                <h4>What is MsMpLics.dll</h4>
+                MsMpLics.dll file is part of License Module product developed by Microsoft Windows Operating System. This part is required for License Module to function, and without that - both Defender for Endpoint and standard Defender won't work.
+              </div>
+              <div style="margin-top:20px">
+                <h4>Attack Requirements</h4>
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Local Administrator rights</strong></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Attack description</h4>
+                This attack allows pentester to disable Microsoft Defender for Endpoint with encrypting dll file.<br>File can be found in: <code>C:\ProgramData\Microsoft\Windows Defender\Platform\{PLATFORM}\MsMpLics.dll</code>
+              </div>
+              <div style="margin-top:20px">
+
+                <h4>PoC</h4>
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Navigate to <code>C:\ProgramData\Microsoft\Windows Defender\Platform\</code></strong></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Choose the newest platform</strong></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Find <code>MsMpLics.dll</code></strong></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Click <code>Properties</code> → <code>Advanced</code> → <code>Encrypt contents to secure data</code> </strong></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Save</strong></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Reboot</strong></li>  
+                </ul>
+                <h5>Screenshots:</h5>
+                <a class="my-image-links" data-gall="gallery01" href="01_killing_defender/encrypt_binary_local_admin.png"><img style="height: 35%; width: 49%" src="01_killing_defender/encrypt_binary_local_admin.png"></a>
+                <a class="my-image-links" data-gall="gallery01" href="01_killing_defender/execute_certify.png"><img style="height: 35%; width: 49%" src="01_killing_defender/execute_certify.png"></a>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+    <!-- ======= Interests ======= -->
+  </section><!-- End About Section -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.js"></script>
+
+  <script>
+    new VenoBox({
+      selector: '.my-image-links',
+      numeration: true,
+      infinigall: true,
+      share: true,
+      spinner: 'rotating-plane'
+  });
+  </script>
+  <!-- Template Main JS File -->
+
+  <!-- custom JS-->
+
+<!-- END custom JS-->
+
+
+
+</body></html>
